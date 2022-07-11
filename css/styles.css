@@ -1,0 +1,141 @@
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@100;300;700&family=Lexend+Deca&display=swap');
+
+:root{
+   
+    --dark-cyan: hsl(184, 100%, 22%);
+    --bright-orange: hsl(31, 77%, 52%);
+    --transparent-white: hsla(0, 0%, 100%, 0.75); /* Paragraphs*/
+    --very-dark-cyan: hsl(179, 100%, 13%);
+    --very-light-gray: hsl(0, 0%, 95%); /* background, headings, buttons*/
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    font-size: 15px;
+}
+
+body{
+    background-color: var(--very-light-gray);
+    margin: 30px;
+}
+
+.container-cards{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.card-component{
+    width: 320px;
+    height: 500px;
+    color: var(--very-light-gray);
+    padding: 50px;
+}
+
+
+.card-component h2{
+    font-family: 'Big Shoulders Display', cursive;
+    font-size: 2.6rem;
+    text-transform: uppercase;
+    margin: 25px 0;
+}
+
+
+.card-component p, .card-button{
+    font-family: 'Lexend Deca', sans-serif;
+}
+
+.card-component p{
+    color: var(--transparent-white);
+    font-weight: 100;
+    line-height: 1.7;
+    margin-bottom: 80px;
+}
+
+.card1{
+   background-color: var(--bright-orange);
+   border-bottom-left-radius: 8px;
+   border-top-left-radius: 8px;
+}
+
+.card2{
+   background-color: var(--dark-cyan);
+}
+
+.card3{
+   background-color: var(--very-dark-cyan);
+   border-bottom-right-radius: 8px;
+   border-top-right-radius: 8px;
+}
+
+.card-button{
+    padding: 15px 30px;
+    cursor: pointer;
+    background-color: var(--very-light-gray);
+    font-size: 1rem;
+    border: none;
+    border-radius: 28px;
+    border: 2px solid #fff;
+    font-weight: 300;
+}
+
+
+.card1 .card-button{
+    color: var(--bright-orange);
+}
+
+.card2 .card-button{
+    color: var(--dark-cyan);
+}
+
+.card3 .card-button{
+    color: var(--very-dark-cyan);
+}
+
+.card-button:hover{
+    background-color: transparent;
+    color: var(--transparent-white);
+}
+
+/* MEDIA QUERIES*/
+
+
+@media screen and (max-width: 720px) {
+     .card1{
+        border-radius: 0;
+        border-top-left-radius: 8px;
+        border-top-right-radius: 8px;
+     }
+     .card3{
+        border-radius: 0;
+        border-bottom-left-radius: 8px;
+        border-bottom-right-radius: 8px;
+     }
+}
+
+@media screen and (min-width: 720px) and (max-width: 1020px) {
+    .card1, .card3{
+        border-radius: 0;
+    }
+
+    .container-cards{
+        gap: 20px;
+    }
+
+    .card1, .card2, .card3{
+        border-radius: 8px;
+    }
+  }
+
+
+
+
+
